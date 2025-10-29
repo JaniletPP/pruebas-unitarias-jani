@@ -20,4 +20,8 @@ def test_sumar(cliente):
 def test_suma_incorrecta():
     assert 5 + 2 == 7  # debería ser 7 → falla
 
+#prueba para generar un error
+def test_fallo_intencional():
+ assert 1 + 1 == 3
+
 
