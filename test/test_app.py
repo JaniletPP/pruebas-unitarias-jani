@@ -20,8 +20,8 @@ def test_sumar(cliente):
 def test_suma_incorrecta():
     assert 5 + 2 == 7  # debería ser 7 → falla
 
-#prueba para generar un error
-def test_fallo_intencional():
- assert 1 + 1 == 3
-
+def test_multiplicar(cliente):
+ r = cliente.get('/multiplicar?a=3&b=5')
+ assert r.status_code == 200
+ assert r.get_json()['resultado'] == 15
 
